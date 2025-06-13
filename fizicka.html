@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Физичка активност - Патека за подобро расположение</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Стилови за копчињата од играта */
+    #game-section button {
+      background: #4CAF50;
+      border: none;
+      color: white;
+      padding: 12px 24px;
+      margin: 8px 8px 8px 0;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(76,175,80,0.6);
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+      user-select: none;
+    }
+    #game-section button:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(76,175,80,0.9);
+    }
+    #game-section button:active {
+      transform: scale(0.95);
+      box-shadow: 0 5px 10px rgba(76,175,80,0.6);
+    }
+
+    #game-result {
+      margin-top: 20px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #2e7d32;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      background: #d0f0d9;
+      padding: 18px 22px;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(46,125,50,0.4);
+      display: none;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Физичка активност</h1>
+  <nav>
+    <div class="nav-left">Физичко подобрување</div>
+    <div class="nav-links">
+      <a href="index.html">Дома</a>
+      <a href="mentalno.html">Ментално</a>
+      <a href="fizicka.html">Физичка</a>
+      <a href="dnevnik.html">Дневник</a>
+      <a href="resursi.html">Ресурси</a>
+    </div>
+  </nav>
+</header>
+<main>
+  <section>
+    <h2>Зошто е важна физичката активност?</h2>
+    <p>Физичката активност е важна затоа што помага да се намали стресот и анксиозноста преку ослободување на ендорфини, хормони кои создаваат чувство на среќа. Таа го подобрува квалитетот на спиењето, ја зголемува енергијата и го зајакнува срцето и белите дробови, што носи подобра циркулација на крвта. Исто така, физичката активност ја подобрува концентрацијата и паметењето, го зајакнува имунолошкиот систем и ги намалува ризиците од многу болести. Покрај тоа, редовното вежбање ја зголемува самодовербата и позитивната слика за себе, што значително влијае на менталното здравје. Дури и кратка прошетка секој ден може да донесе голема корист за телото и умот.
+      Значи редовната физичка активност навистина помага да се намали стресот, подобрува расположението и ја одржува телесната здравствена состојба.</p>
+  </section>
+  <section id="game-section">
+    <h3>Мини-игра: Избери активност</h3>
+    <p>Избери активност и види како влијае на твоето расположение:</p>
+    <button data-activity="трчање">Трчање</button>
+    <button data-activity="јога">Јога</button>
+    <button data-activity="пешачење">Пешачење</button>
+    <button data-activity="танцување">Танцување</button>
+    <div id="game-result"></div>
+  </section>
+</main>
+<footer>
+  <p>© 2025 Патеката за подобро расположение | Податоци од HBSC Македонија</p>
+</footer>
+
+<script>
+  const activityAdvice = {
+    "трчање": "Трчањето ослободува ендорфини и го зголемува расположението. Одлично за ментална и физичка свежина!",
+    "јога": "Јогата помага во релаксација, намалување на стресот и подобрување на флексибилноста.",
+    "пешачење": "Пешачењето на свеж воздух го смирува умот и го подобрува општото здравје.",
+    "танцување": "Танцувањето го зголемува задоволството и ти помага да се изразиш преку движење."
+  };
+
+  const buttons = document.querySelectorAll('#game-section button');
+  const resultDiv = document.getElementById('game-result');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const activity = btn.getAttribute('data-activity');
+      resultDiv.textContent = activityAdvice[activity];
+      resultDiv.style.display = 'block';
+    });
+  });
+</script>
+</body>
+</html>
+

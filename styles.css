@@ -1,0 +1,552 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #fceabb, #f8b500);
+    color: #333;
+}
+.group-selection {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.group-selection p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.group-selection .btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+.group-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.group-selection p {
+    font-size: 20px;
+    max-width: 600px;
+    margin: 10px 0;
+}
+
+.group-selection .btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+header {
+    background-color: #ff6b81;
+    padding: 10px 0;
+}
+.intro {
+    text-align: center;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+    color: white;
+    font-size: 45px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: #ff6b81;
+}
+
+.nav-left {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 50px;
+    font-size: 25px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffeaa7;
+}
+
+main {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.btn-group {
+    margin: 20px 0;
+}
+
+.btn-group button {
+    background-color: #ff7675;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 25px;
+    margin: 0 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-group button:hover {
+    background-color: #fab1a0;
+}
+
+#game-section {
+    margin-top: 50px;
+}
+
+#game-section h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+iframe {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+footer {
+    background-color: #ff6b81;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+#entry-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#entry-text {
+    width: 90%;
+    max-width: 600px;
+    padding: 15px;
+    font-size: 18px;
+    border: 2px solid #ff6b81;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    resize: vertical;
+}
+
+#entry-form button {
+    background-color: #ff6b81;
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#entry-form button:hover {
+    background-color: #fab1a0;
+}
+
+#entries-list {
+    list-style-type: disc;
+    padding-left: 40px;
+    font-size: 18px;
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto;
+}
+#game-section button {
+    background: #55efc4;
+    border: none;
+    color: #2d3436;
+    padding: 12px 24px;
+    margin: 8px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(85, 239, 196, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+#game-section button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(85, 239, 196, 0.8);
+}
+
+#game-result {
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #09804e;
+    background-color: #d0f0d9;
+    padding: 18px;
+    border-radius: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .nav-links a {
+        margin: 10px 0;
+        font-size: 20px;
+    }
+
+    .btn-group button {
+        margin: 10px 5px;
+        font-size: 16px;
+    }
+
+    #entry-text {
+        width: 95%;
+    }
+}
+main ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+main ul li {
+    background: #ffeaa7;
+    margin: 10px 0;
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+main ul li:hover {
+    transform: translateY(-3px);
+}
+
+main ul li a {
+    color: #2d3436;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+main ul li a:hover {
+    text-decoration: underline;
+}
+
+main h2, main h3 {
+    color: #2d3436;
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    background-color: #fef5e7;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+.mental-section {
+    max-width: 750px;
+    margin: 0 auto;
+    background: #fff0f5;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.mental-section h2 {
+    color: #d6336c;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.mental-section p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #2d3436;
+    margin-bottom: 15px;
+}
+
+.mental-section ul {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.mental-section ul li {
+    font-size: 17px;
+    margin-bottom: 10px;
+    color: #444;
+}
+.fizicka-info {
+    max-width: 750px;
+    margin: 0 auto;
+    background: #e8f5e9;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.fizicka-info h2 {
+    color: #388e3c;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.fizicka-info p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+#tips-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#tips-section button {
+    background: #d6336c;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    margin: 8px;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(214, 51, 108, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    user-select: none;
+}
+
+#tips-section button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(214, 51, 108, 0.6);
+}
+
+#tips-section button:active {
+    transform: scale(0.95);
+    box-shadow: 0 5px 12px rgba(214, 51, 108, 0.4);
+}
+
+#tip-result {
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #6d214f;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background: #ffe6f0;
+    padding: 20px 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(109, 33, 79, 0.2);
+    display: none;
+}
+/* Секција за прашањето */
+#mental-question {
+    max-width: 600px;
+    margin: 30px auto;
+    background: #fff9e6;
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(255, 183, 77, 0.4);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* Наслов на прашањето */
+#mental-question h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ff6b81;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Секција со опции (радио копчиња) */
+#mental-question form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Лабели за радио копчиња */
+#mental-question label {
+    background: #ffe0b2;
+    border-radius: 30px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Скривање на стандардното радио копче */
+#mental-question input[type="radio"] {
+    display: none;
+}
+
+/* Приказ на кастом радио копче (крстено копче) */
+#mental-question label::before {
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border: 2.5px solid #ff6b81;
+    border-radius: 50%;
+    background: white;
+    flex-shrink: 0;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Кога радио е селектиран */
+#mental-question input[type="radio"]:checked + label {
+    background: #ff6b81;
+    color: white;
+    box-shadow: 0 5px 15px rgba(255, 107, 129, 0.6);
+    font-weight: 700;
+}
+
+/* Пополнување на кругот во радио копчето */
+#mental-question input[type="radio"]:checked + label::before {
+    background: white;
+    border-color: white;
+    box-shadow: 0 0 0 6px #ff6b81 inset;
+}
+
+/* Ховер ефект на лабелата */
+#mental-question label:hover {
+    background: #ffafaf;
+    box-shadow: 0 5px 12px rgba(255, 107, 129, 0.5);
+    color: white;
+}
+#mental-question {
+    max-width: 600px;
+    margin: 30px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff9e6;
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(255, 183, 77, 0.3);
+    color: #333;
+}
+
+#mental-question h3 {
+    color: #ff6b81;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.option {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+.option input[type="radio"] {
+    accent-color: #ff6b81;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.option label {
+    cursor: pointer;
+    user-select: none;
+}
+
+#check-answer {
+    display: block;
+    margin: 25px auto 0;
+    background-color: #ff6b81;
+    color: white;
+    font-weight: 700;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(255, 107, 129, 0.6);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    user-select: none;
+}
+
+#check-answer:hover {
+    background-color: #ff85a2;
+    transform: translateY(-3px);
+}
+
+#check-answer:active {
+    transform: scale(0.95);
+    box-shadow: 0 4px 14px rgba(255, 107, 129, 0.6);
+}
+
+#answer-result {
+    margin-top: 25px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #2e7d32;
+    background: #d0f0d9;
+    padding: 18px 22px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(46, 125, 50, 0.4);
+    max-width: 600px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+}

@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="mk" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ментално здравје - Патеката за подобро расположение</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Додадов стилови за копчињата со расположение */
+    .mood-buttons {
+      margin: 20px 0 40px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .mood-buttons button {
+      background: #f76c6c;
+      border: none;
+      padding: 14px 26px;
+      border-radius: 35px;
+      font-size: 1.1rem;
+      color: white;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(247,108,108,0.7);
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+      user-select: none;
+    }
+    .mood-buttons button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(247,108,108,0.9);
+    }
+    .mood-buttons button:active {
+      transform: scale(0.95);
+      box-shadow: 0 5px 10px rgba(247,108,108,0.7);
+    }
+
+    #advice {
+      margin-top: 25px;
+      padding: 18px 22px;
+      background: #ffd5d5;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #a83a3a;
+      box-shadow: 0 5px 20px rgba(247,108,108,0.5);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      display: none;
+    }
+  </style>
+  <script defer src="mentalno.js"></script>
+</head>
+<body>
+<header>
+  <h1>Ментално здравје</h1>
+  <nav>
+      <div class="nav-left">Ментално подобрување</div>
+      <div class="nav-links">
+        <a href="index.html">Дома</a>
+        <a href="mentalno.html">Ментално</a>
+        <a href="fizicka.html">Физичка</a>
+        <a href="dnevnik.html">Дневник</a>
+        <a href="resursi.html">Ресурси</a>
+      </div>
+    </nav>
+
+</header>
+<main>
+  <section>
+    <h2>Стрес и како успешно да се справиме со него </h2>
+    <p>Стресот е природна реакција на нашето тело и ум на различни предизвици и притисоци од околината. Тој може да биде краткотраен (акутен) или долготраен (хроничен). Модерниот живот често носи многу извори на стрес, како работа, учење, семејни обврски и други ситуации што можат да нè оптоварат. Стресот е нормална реакција на предизвици, но е важно да го препознаеме и научиме техники за справување. Справувањето со стресот е процес што бара време и свесна посветеност. Применувањето на овие совети може значително да го намали нивото на стрес и да го подобри квалитетот на животот.</p>
+    <ul>
+      <li>Диши длабоко и полека</li>
+      <li>Направи пауза и прошетка</li>
+      <li>Разговарај со пријател или родител</li>
+    </ul>
+  </section>
+
+  <!-- Додадов избор на расположение -->
+  <section>
+    <h3>Како се чувствуваш денес?</h3>
+    <div class="mood-buttons">
+      <button data-mood="srekjen">Среќен</button>
+      <button data-mood="tazen">Тажен</button>
+      <button data-mood="stresiran">Стресиран</button>
+      <button data-mood="umoren">Уморен</button>
+      <button data-mood="miren">Мирен</button>
+    </div>
+    <div id="advice"></div>
+  </section>
+
+  <section id="quiz-section">
+<!--    <h3>Квиз: Како се справуваш со стресот?</h3>-->
+<!--    <form id="quiz-form">-->
+<!--      <p>Кога си под стрес, што најчесто правиш?</p>-->
+<!--      <label><input type="radio" name="q1" value="a" required> Спорт или прошетка</label><br />-->
+<!--      <label><input type="radio" name="q1" value="b"> Гледам серија или играм игра</label><br />-->
+<!--      <label><input type="radio" name="q1" value="c"> Разговарам со некого</label><br />-->
+<!--      <label><input type="radio" name="q1" value="d"> Игнорирам и продолжувам со обврските</label><br />-->
+<!--      <button type="submit">Провери го одговорот</button>-->
+<!--    </form>-->
+    <section id="mental-question">
+        <h3>Како најчесто се справуваш со стресот?</h3>
+        <form id="stress-form">
+          <div class="option">
+            <input type="radio" id="opt1" name="stress" value="спорт или прошетка" />
+            <label for="opt1">Спорт или прошетка</label>
+          </div>
+          <div class="option">
+            <input type="radio" id="opt2" name="stress" value="гледам серија или играм игра" />
+            <label for="opt2">Гледам серија или играм игра</label>
+          </div>
+          <div class="option">
+            <input type="radio" id="opt3" name="stress" value="разговарам со некого" />
+            <label for="opt3">Разговарам со некого</label>
+          </div>
+          <div class="option">
+            <input type="radio" id="opt4" name="stress" value="игнорирам и продолжувам со обврските" />
+            <label for="opt4">Игнорирам и продолжувам со обврските</label>
+          </div>
+          <button type="button" id="check-answer">Провери го одговорот</button>
+        </form>
+        <div id="answer-result"></div>
+      </section>
+
+      </form>
+    </section>
+
+    <div id="quiz-result" style="margin-top: 15px; font-weight: bold;"></div>
+  </section>
+  <section id="tips-section">
+    <h3>Кликни за мотивација</h3>
+    <button data-tip="спиј">Спиј 8 часа</button>
+    <button data-tip="пиши">Води дневник</button>
+    <button data-tip="медитирај">Медитирај</button>
+    <div id="tip-result"></div>
+  </section>
+</main>
+<footer>
+  <p>© 2025 Патеката за подобро расположение | Податоци од HBSC Македонија</p>
+</footer>
+
+<script>
+  // Советите поврзани со расположение
+  const adviceTextMentalno = {
+    srekjen: "Одлично е да останеш активен и да споделиш со пријателите својата среќа! Практикувај позитивно размислување и благодарност.",
+    tazen: "Понекогаш е добро да зборуваш со некој кому му веруваш. Кажи му го проблемот или запиши ги своите чувства во дневник и пробај медитација. Мисли позитивно!",
+    stresiran: "Пробај длабоко дишење, па кратка прошетка на свеж воздух. Медитацијата и релаксацијата помагаат.",
+    umoren: "Почитувај го твоето тело - одмори и осигурај се дека спиеш доволно. Обиди се со лесни вежби за релаксација.",
+    miren: "Одлично е да ја одржуваш својата рутина и да практикуваш медитација и благодарност секој ден."
+  };
+
+  const buttons = document.querySelectorAll('.mood-buttons button');
+  const advice = document.getElementById('advice');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const mood = btn.getAttribute('data-mood');
+      advice.textContent = adviceTextMentalno[mood];
+      advice.style.display = "block";
+    });
+  });
+
+  // Овој дел е за квизот, може го користиш како што сакаш
+  const quizForm = document.getElementById('quiz-form');
+  const quizResult = document.getElementById('quiz-result');
+
+  quizForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const answer = quizForm.q1.value;
+    let feedback = "";
+
+    switch(answer) {
+      case "a":
+        feedback = "Супер! Активноста и прошетката се одлични начини за справување со стресот.";
+        break;
+      case "b":
+        feedback = "Понекогаш одморот со серија или игра може да помогне, но не заборавај и на другите методи.";
+        break;
+      case "c":
+        feedback = "Разговарањето е многу корисно за намалување на стресот. Добро е што го правиш тоа!";
+        break;
+      case "d":
+        feedback = "Игнорирањето може да ја зголеми напнатоста. Обиди се да се справиш со стресот свесно.";
+        break;
+    }
+
+    quizResult.textContent = feedback;
+  });
+</script>
+
+</body>
+</html>
+
+<script>
+  const tipovi = {
+    "спиј": "Добриот сон е темел на добро ментално здравје.",
+    "пиши": "Пишувањето на чувства помага во нивна обработка.",
+    "медитирај": "Медитацијата го намалува стресот и ја подобрува концентрацијата."
+  };
+
+  const btns = document.querySelectorAll('#tips-section button');
+  const output = document.getElementById('tip-result');
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const tip = btn.getAttribute('data-tip');
+      output.textContent = tipovi[tip];
+      output.style.display = 'block';
+    });
+  });
+</script>
